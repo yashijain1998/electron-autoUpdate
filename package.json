@@ -1,0 +1,40 @@
+{
+  "name": "electron-common-app",
+  "version": "1.0.0",
+  "description": "common-electron app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build:windows": "electron-builder --win --dir",
+    "dist:windows": "electron-builder --win",
+    "build:macos": "electron-builder --macos --dir",
+    "dist:macos": "electron-builder --macos",
+    "build:linux": "electron-builder --linux --dir",
+    "dist:linux": "electron-builder --linux",
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
+  },
+  "author": "yashi",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^24.0.0",
+    "electron-builder": "^23.6.0"
+  },
+  "build": {
+    "appId": "com.my.app.id",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "linux": {
+      "category": "Utility"
+    }
+  },
+  "dependencies": {
+    "electron-updater": "^5.3.0"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/yashijain1998/electron-autoUpdate.git"
+  }
+}
